@@ -13,7 +13,7 @@
 <body>
   <section class="carousel">
     <section class="carousel-wrap">
-      <div class="container container1 fade">
+      <div class="container container1 fade is-active">
         <p class="date">1971</p>
         <div class="imgContainer imgContainer1">
           <img class="img" src="image/1971-G50C-ok copie.png" alt="Peugeot G50C" title="Peugeot G50C">
@@ -52,40 +52,7 @@
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span>
 
-  <script type="text/javascript">
-    var left = document.querySelector('.left');
-    var right = document.querySelector('.right');
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var imgs = document.querySelectorAll('.container');
-      if (n > imgs.length) {
-        slideIndex = 1;
-      }
-      if (n < 1) {
-        slideIndex = imgs.length;
-      }
-      for (i = 0; i < imgs.length; i++) {
-        imgs[i].classList.remove('is-active');
-      }
-      imgs[slideIndex - 1].classList.add('is-active');
-    }
-
-    left.addEventListener("click", function() {
-      plusSlides(-1);
-    });
-
-
-    right.addEventListener("click", function() {
-      plusSlides(1);
-    });
-  </script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

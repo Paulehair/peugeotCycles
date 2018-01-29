@@ -38,31 +38,45 @@
   display: none;
 }
 
+.container.is-active {
+  display: block;
+}
+
 .imgContainer {
   height: 95%;
   overflow: hidden;
 }
 
-.container.is-active {
-  display: block;
-}
-
 .left {
   color: #fff;
-  font-size: 50px;
+  font-size: 40px;
   position: absolute;
-  bottom: 45%;
+  bottom: 10%;
   left: 40px;
   cursor: pointer;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  height: 43px;
+  width: 43px;
+  background-color: khaki;
+  border-radius: 50%;
 }
 
 .right {
   color: #fff;
-  font-size: 50px;
+  font-size: 40px;
   position: absolute;
-  bottom: 45%;
-  right: 40px;
+  bottom: 10%;
+  left: 150px;
   cursor: pointer;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  height: 43px;
+  width: 43px;
+  background-color: khaki;
+  border-radius: 50%;
 }
 
 .date {
