@@ -7,9 +7,6 @@ var index = 1;
 left.addEventListener("click", function() {
   index -= 1;
   var counter = index;
-  if (counter > imgs.length) {
-    index = 1;
-  }
   if (counter < 1) {
     index = imgs.length;
   }
@@ -25,9 +22,6 @@ right.addEventListener("click", function() {
   var counter = index;
   if (counter > imgs.length) {
     index = 1;
-  }
-  if (counter < 1) {
-    index = imgs.length;
   }
   for (i = 0; i < imgs.length; i++) {
     imgs[i].classList.remove('is-active');
