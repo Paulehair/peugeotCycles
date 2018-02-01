@@ -4,61 +4,40 @@ var imgs = document.querySelectorAll('.container');
 
 var index = 1;
 
-left.addEventListener("click", function() {
-  index -= 1;
-  var counter = index;
-  if (counter < 1) {
+function changeSlides(n) {
+  slide(index += n);
+}
+
+function slide(n) {
+  if (n > imgs.length) {
+    index = 1;
+  }
+  if (n < 1) {
     index = imgs.length;
   }
   for (i = 0; i < imgs.length; i++) {
     imgs[i].classList.remove('is-active');
   }
   imgs[index - 1].classList.add('is-active');
+}
+
+left.addEventListener("click", function() {
+  changeSlides(-1);
 });
 
 
 right.addEventListener("click", function() {
-  index += 1;
-  var counter = index;
-  if (counter > imgs.length) {
-    index = 1;
-  }
-  for (i = 0; i < imgs.length; i++) {
-    imgs[i].classList.remove('is-active');
-  }
-  imgs[index - 1].classList.add('is-active');
+  changeSlides(1);
 });
 
 window.addEventListener('keydown', function(event) {
   if (event.which == 37) {
-    index -= 1;
-    var counter = index;
-    if (counter > imgs.length) {
-      index = 1;
-    }
-    if (counter < 1) {
-      index = imgs.length;
-    }
-    for (i = 0; i < imgs.length; i++) {
-      imgs[i].classList.remove('is-active');
-    }
-    imgs[index - 1].classList.add('is-active');
+    changeSlides(-1);
   }
 });
 
 window.addEventListener('keydown', function(event) {
   if (event.which == 39) {
-    index -= 1;
-    var counter = index;
-    if (counter > imgs.length) {
-      index = 1;
-    }
-    if (counter < 1) {
-      index = imgs.length;
-    }
-    for (i = 0; i < imgs.length; i++) {
-      imgs[i].classList.remove('is-active');
-    }
-    imgs[index - 1].classList.add('is-active');
+    changeSlides(1);
   }
 });
